@@ -79,6 +79,10 @@ def open_cmd_and_run():
     pyautogui.write('start firefox')
     pyautogui.press('enter')
 
+    # Minimize the CMD window using Win + Down
+    pyautogui.hotkey('win', 'down')
+    time.sleep(0.5)  # Small delay to ensure window is minimized
+
     # Continuously check if Firefox is open
     while not is_firefox_open():
         time.sleep(0.5)  # Check every 0.5 seconds
